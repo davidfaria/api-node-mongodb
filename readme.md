@@ -1,6 +1,6 @@
 # Api Node.js
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/davidfaria/node-tindev/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/davidfaria/api-node-mongodb/blob/master/LICENSE)
 ![](https://img.shields.io/github/package-json/v/davidfaria/api-node-mongodb.svg)
 ![](https://img.shields.io/github/last-commit/davidfaria/api-node-mongodb.svg?color=red)
 ![](https://img.shields.io/github/languages/top/davidfaria/api-node-mongodb.svg?color=yellow)
