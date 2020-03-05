@@ -12,7 +12,7 @@ class RegistrationMail {
 
     await Mail.sendMail({
       to: `${dataMail.name} <${dataMail.email}>`,
-      subject: '[LARAWORK] - Confirmação de cadastro',
+      subject: '[EMPRESA] - Confirmação de cadastro',
       template: 'registration',
       context: {
         name: dataMail.name,

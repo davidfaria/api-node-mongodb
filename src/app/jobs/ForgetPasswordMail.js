@@ -12,7 +12,7 @@ class ForgetPasswordMail {
 
     await Mail.sendMail({
       to: `${dataMail.name} <${dataMail.email}>`,
-      subject: '[LARAWORK] - Alteração de Senha',
+      subject: '[EMPRESA] - Alteração de Senha',
       template: 'forget_password',
       context: {
         name: dataMail.name,
