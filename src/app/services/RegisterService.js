@@ -3,7 +3,6 @@ import RegistrationMail from '@jobs/RegistrationMail';
 import Mail from '@models/Mail';
 
 import User from '@models/User';
-import Plan from '@models/Plan';
 import Wallet from '@models/Wallet';
 
 class RegisterService {

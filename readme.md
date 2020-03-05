@@ -37,8 +37,21 @@ yarn install
 # criar .env para informar as SUAS variáveis de ambiente
 cp .env.example .env
 
+# create folder docker/storage para armazenamento local
+mkdir -p docker/storage
+
+# permissão para container redis /mongodb
+# se o container ficar reiniciando, aplique a permissão e reiniciei os containers
+sudo chown -R 1001 docker
+
 # subir os serviços (redis, mongodb)
 docker-compose up -d
+
+# verifique se os container estão rodando corretamente
+docker ps
+
+# obs. Se precisar reinicar os container utilize
+docker-compose restart
 
 # iniciar o servidor da aplicação
 yarn dev

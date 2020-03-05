@@ -8,7 +8,11 @@ class RegisterController {
     /**
      *  Busca o Plano Free na criação da conta.
      */
-    const plan = await Plan.findOne({ name: 'Free', status: true });
+    const plan = await Plan.findOneAndUpdate(
+      { name: 'Free', status: true },
+      { name: 'Free', status: true },
+      { upsert: true, useFindAndModify: false, new: true }
+    );
 
     if (!plan) return res.sendError('Plan Not Found', 400);
 

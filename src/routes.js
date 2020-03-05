@@ -17,9 +17,6 @@ import ForgetController from '@controllers/ForgetController';
 import UserController from '@controllers/UserController';
 import FileController from '@controllers/FileController';
 import PlanController from '@controllers/PlanController';
-import SubscriptionsController from '@controllers/SubscriptionsController';
-import PayController from '@controllers/PayController';
-import InvoiceController from '@controllers/InvoiceController';
 import WalletController from '@controllers/WalletController';
 
 /**
@@ -56,6 +53,9 @@ routes.put(
   ForgetController.update
 );
 
+routes.get('/plans', PlanController.index);
+routes.post('/plans', PlanController.store);
+
 routes.use(authMiddleware);
 
 routes.get('/', async (_, res) => {
@@ -78,16 +78,5 @@ routes.get('/wallets/:_id', WalletController.show);
 routes.post('/wallets', WalletValidator, WalletController.store);
 routes.put('/wallets/:_id', WalletValidator, WalletController.update);
 routes.delete('/wallets/:_id', WalletController.destroy);
-
-routes.get('/plans', PlanController.index);
-routes.post('/plans', PlanController.store);
-
-routes.get('/subscriptions', SubscriptionsController.index);
-routes.post('/subscriptions', SubscriptionsController.store);
-
-routes.post('/pays', PayController.store);
-routes.get('/invoices', InvoiceController.index);
-routes.post('/invoices', InvoiceController.store);
-routes.put('/invoices/:id', InvoiceController.update);
 
 export default routes;
