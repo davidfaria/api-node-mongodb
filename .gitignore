@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+.env
+.env.test
+tmp/test/
+tmp/uploads/
+__tests__/coverage/
+__tests__/database.sqlite
+dist/
+docker/storage/
+logs/

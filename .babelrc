@@ -1,0 +1,26 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@app": "./src",
+          "@config": "./src/config",
+          "@database": "./src/database",
+          "@lib": "./src/lib",
+          "@controllers": "./src/app/controllers",
+          "@helpers": "./src/app/helpers",
+          "@jobs": "./src/app/jobs",
+          "@middlewares": "./src/app/middlewares",
+          "@models": "./src/app/models",
+          "@repositories": "./src/app/repositories",
+          "@services": "./src/app/services",
+          "@validators": "./src/app/validators"
+        }
+      }
+    ],
+    ["@babel/transform-runtime"]
+  ]
+}
